@@ -30,8 +30,7 @@ This repository provides a reproducible synthetic-data framework that:
 synthetic-RATEAF/
 │
 ├── data/
-│ ├── dummy_rateaf.csv # schema-only example (no real data available)
-│ └── README.md # describes data fields and formats
+│ ├── RATAF-dummy.csv # schema-only example (no real data available)
 │
 ├── main/
 │ ├── controlled_boosting_experiment.R # main script for controlled boosting experiment
