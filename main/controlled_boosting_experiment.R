@@ -5,7 +5,7 @@ n_iterations <- 500
 # Scripts, libraries and functions loading
 # -------------------------------------------------------
 
-setwd("H:/partTimePhD/Code/synthetic-RATEAF/utils")
+setwd("synthetic-RATEAF/utils")
 source('functions.R')
 source('bias_analysis.R')
 source('synthetic_data_generation.R')
@@ -617,4 +617,5 @@ for (scenario in names(boosting_results)) {
 # Inspect
 View(avg_subgroup_tables[["White_30%"]])
 View(avg_subgroup_tables[["White_60%"]])
+
 # ...
