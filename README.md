@@ -64,13 +64,13 @@ synthetic-RATEAF/
 ```
 
 All scripts use base R and tidyverse functionality only.
-No external datasets are provided. The included dummy_rateaf.csv allows you to test that the code executes successfully.
+No external datasets are provided. The included RATEAF-dummy.csv allows you to test that the code executes successfully.
 
 
 ### Data Preparation
 
 Place your dataset in the `data/` folder.
-If no data are available, you can use the provided dummy_rateaf.csv (structure-only, no clinical meaning).
+If no data are available, you can use the provided RATEAF-dummy.csv (structure-only, no clinical meaning).
 
 
 ### Run Experiments
@@ -140,7 +140,7 @@ If you use this repository or build upon this codebase, please cite:
 | **Execution time** | ≈ 5–10 minutes per experiment on a standard laptop (Intel i7, 16 GB RAM) |
 | **Output directory** | `/results/` (auto-generated) |
 | **Dependencies** | tidyverse, purrr, readr, ggplot2, dplyr |
-| **Data** | `dummy_rateaf.csv` included for schema testing only |
+| **Data** | `RATEAF-dummy.csv` included for schema testing only |
 
 
 ### Adaptability and Reuse
