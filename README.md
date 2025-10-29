@@ -62,9 +62,6 @@ synthetic-RATEAF/
 ```
 - **R version:** ≥ 4.2  
 - **Tested environment:** R 4.3.1 on Windows 10  
-- **Core packages:**
-  ```r
-  install.packages(c("tidyverse", "purrr", "readr", "ggplot2", "dplyr"))
 ```
 
 All scripts use base R and tidyverse functionality only.
