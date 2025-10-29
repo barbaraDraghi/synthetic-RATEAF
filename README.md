@@ -69,27 +69,38 @@ No external datasets are provided. The included RATEAF-dummy.csv allows you to t
 ### Step 1 – Download the Code
 Download or clone this repository and open it in **RStudio**.
 
-### Step 2 – Set the Working Directory
-Each main script requires the working directory to be correctly defined before execution.  
-Set your working directory to the repository’s `/utils` folder using your **full local path**.  
-This ensures that all relative paths for loading functions and data work correctly.
+### Step 2 – Working Directory Handling
+Each main script automatically detects its own location when executed in **RStudio** or via **Rscript**, and sets the correct working directory.  
+No manual path edits are required under normal conditions.
+
+However, if automatic detection fails (e.g., running from an unusual environment),  
+you can manually set your working directory to the repository’s `/main` folder using your full local path:
 
 ```r
 # Example (Windows)
-setwd("H:/Projects/synthetic-RATEAF/utils")
+setwd("H:/Projects/synthetic-RATEAF/main")
 
 # Example (Mac/Linux)
-setwd("~/Projects/synthetic-RATEAF/utils")
+setwd("~/Projects/synthetic-RATEAF/main")
+
 ```
 💡 Tip:
-Each script under /main (controlled_boosting_experiment.R, exploratory_boosting_experiment.R, replication_experiment.R)
-contains a setwd() line that must be updated to match your own local path before running the analysis.
-Alternatively, you can comment out the internal setwd() line and define the path manually in RStudio before sourcing the script.
+Each script (controlled_boosting_experiment.R, exploratory_boosting_experiment.R, replication_experiment.R)
+includes an internal routine that automatically sets the working directory and sources the required utilities from ../utils/.
+You can disable or adjust this behavior if integrating into another workflow.
 
 ### Step 3 – Data Preparation
 
-Place your dataset in the `data/` folder.
-If no data are available, you can use the provided RATEAF-dummy.csv (structure-only, no clinical meaning) a two-row illustrative file that serves as a reference for column names and variable formatting. Please see the Data Policy section for further clarification.
+Place your dataset in the `data/` folder.  
+
+- If you have **approved access to the real RATE-AF dataset** (e.g., `RATE-AF.dta`),  
+  simply place the file in this folder — the scripts are already configured to recognize and process it automatically.  
+
+- If you **do not have access** to the real data, you can use the provided [`RATEAF-dummy.csv`](data/RATEAF-dummy.csv) —  
+  a **two-row illustrative file** that serves as a reference for variable names and expected structure to create your dummy data or to be able to adapt the code to your data.
+  (*no real clinical information included*).  
+
+Please see the **Data Policy** section for further clarification on data governance and access.
 
 
 ### Step 4 – Run Experiments
