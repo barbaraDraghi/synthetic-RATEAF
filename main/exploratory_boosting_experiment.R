@@ -4,7 +4,7 @@ set.seed(12345)
 # Scripts, libraries and functions loading
 # -------------------------------------------------------
 
-setwd("H:/partTimePhD/Code/synthetic-RATEAF/utils")
+setwd("synthetic-RATEAF/utils")
 source('functions.R')
 source('bias_analysis.R')
 source('synthetic_data_generation.R')
@@ -276,6 +276,7 @@ subgroup_rateaf_vs_syn <- combine_subgroup_summaries(
 )
 
 View(subgroup_rateaf_vs_syn)
+
 
 
 
