@@ -12,7 +12,7 @@ The scripts here implement the **controlled**, **exploratory**, and **replicatio
 
 ---
 
-## 🧠 Background
+##  Background
 
 The **RATE-AF trial** compared *low-dose digoxin* vs *bisoprolol* for heart-rate control in older patients with permanent atrial fibrillation and heart-failure symptoms.  
 This repository provides a reproducible synthetic-data framework that:
@@ -53,30 +53,30 @@ synthetic-RATEAF/
 
 ```
 
-
+---
 
 ## ⚙️ How to Run
 
-### 1️⃣ Requirements
+### Requirements
 
 ```
-- **R version:** ≥ 4.2  
-- **Tested environment:** R 4.3.1 on Windows 10  
+- R version: ≥ 4.2  
+- Tested environment: R 4.3.1 on Windows 10  
 ```
 
 All scripts use base R and tidyverse functionality only.
-No external datasets are provided — the included dummy_rateaf.csv allows you to test that the code executes successfully.
+No external datasets are provided. The included dummy_rateaf.csv allows you to test that the code executes successfully.
 
 
-### 2️⃣ Data Preparation
+### Data Preparation
 
-Place your dataset in the ```data/``` folder.
+Place your dataset in the `data/` folder.
 If no data are available, you can use the provided dummy_rateaf.csv (structure-only, no clinical meaning).
 
 
-### 3️⃣ Run Experiments
+### Run Experiments
 
-Each script in /main corresponds to one of the analyses presented in the NPJ manuscript.
+Each script in `/main` corresponds to one of the analyses presented in the NPJ manuscript.
 
 ```
 # Controlled boosting (targeted subgroup augmentation)
@@ -88,11 +88,7 @@ source("main/exploratory_boosting_experiment.R")
 # Replication (full virtual cohort reconstruction)
 source("main/replication_experiment.R")
 ```
-
-
----
-
-### 4️⃣ Outputs
+### Outputs
 
 Each experiment generates a combination of **summary tables** and **diagnostic plots** under `/results/`.  
 The main output categories include:
@@ -116,17 +112,16 @@ All analyses involving real RATE-AF data must be conducted under approved govern
 
 ---
 
-## 🧩 Citation
+## Citation
 
 If you use this repository or build upon this codebase, please cite:
-
 > Draghi, B. et al. *High-fidelity synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study.*  
 > Submitted to *NPJ Digital Medicine – Digital Health Equity & Access*, 2025.
 
 
 ---
 
-## 🧠 Reproducibility Checklist
+## Reproducibility Checklist
 
 | Item | Details |
 |------|----------|
@@ -138,7 +133,7 @@ If you use this repository or build upon this codebase, please cite:
 | **Data** | `dummy_rateaf.csv` included for schema testing only |
 
 
-## 🧩 Adaptability and Reuse
+### Adaptability and Reuse
 
 While some preprocessing and postprocessing functions in this repository are **specific to the RATE-AF dataset**  
 (e.g., variable mappings, NYHA/EHRA conversions, and clinical endpoint formatting),  
@@ -157,10 +152,11 @@ are warmly encouraged to get in touch with the author.
 
 ---
 
-## 💬 Contact
+## 📧 Contact
 
 **Barbara Draghi**  
 Clinical Practice Research Datalink (MHRA) / Brunel University London
+
 📧 barbara.draghi@mhra.gov.uk  / barbara.draghi@brunel.ac.uk
 🌐 [https://barbaradraghi.github.io](https://barbaradraghi.github.io)
 
