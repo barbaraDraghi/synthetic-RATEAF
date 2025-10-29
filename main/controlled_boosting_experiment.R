@@ -2,15 +2,40 @@ set.seed(12345)
 n_iterations <- 500
 
 # -------------------------------------------------------
-# Scripts, libraries and functions loading
+# Automatically set working directory
 # -------------------------------------------------------
 
-setwd("synthetic-RATEAF/utils")
-source('functions.R')
-source('bias_analysis.R')
-source('synthetic_data_generation.R')
-source('fidelity_evaluation.R')
-source('utility_evaluation.R')
+# Try to detect the current script path (RStudio or command line)
+try({
+  if (requireNamespace("rstudioapi", quietly = TRUE) &&
+      !is.null(rstudioapi::getActiveDocumentContext()$path)) {
+    # --- When running inside RStudio ---
+    this_path <- dirname(rstudioapi::getActiveDocumentContext()$path)
+  } else {
+    # --- When running via Rscript or source() ---
+    cmd_args <- commandArgs(trailingOnly = FALSE)
+    this_file <- sub("--file=", "", cmd_args[grep("--file=", cmd_args)])
+    this_path <- if (length(this_file) > 0) dirname(normalizePath(this_file)) else getwd()
+  }
+  
+  if (dir.exists(this_path)) {
+    setwd(this_path)
+    message("✅ Working directory set to: ", this_path)
+  } else {
+    stop("❌ Could not locate utils/ directory. Please check your project structure.")
+  }
+}, silent = FALSE)
+
+
+# -------------------------------------------------------
+# Load scripts, libraries, and functions
+# -------------------------------------------------------
+
+source('../utils/functions.R')
+source('../utils/bias_analysis.R')
+source('../utils/synthetic_data_generation.R')
+source('../utils/fidelity_evaluation.R')
+source("../utils/utility_evaluation.R")
 
 required_packages <- c(
   'dplyr', 'ggplot2', 'tidyr', 'bnlearn', 'purrr', 
@@ -619,3 +644,4 @@ View(avg_subgroup_tables[["White_30%"]])
 View(avg_subgroup_tables[["White_60%"]])
 
 # ...
+
