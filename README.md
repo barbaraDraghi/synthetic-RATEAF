@@ -66,14 +66,33 @@ synthetic-RATEAF/
 All scripts use base R and tidyverse functionality only.
 No external datasets are provided. The included RATEAF-dummy.csv allows you to test that the code executes successfully.
 
+### Step 1 – Download the Code
+Download or clone this repository and open it in **RStudio**.
 
-### Data Preparation
+### Step 2 – Set the Working Directory
+Each main script requires the working directory to be correctly defined before execution.  
+Set your working directory to the repository’s `/utils` folder using your **full local path**.  
+This ensures that all relative paths for loading functions and data work correctly.
+
+```r
+# Example (Windows)
+setwd("H:/Projects/synthetic-RATEAF/utils")
+
+# Example (Mac/Linux)
+setwd("~/Projects/synthetic-RATEAF/utils")
+```
+💡 Tip:
+Each script under /main (controlled_boosting_experiment.R, exploratory_boosting_experiment.R, replication_experiment.R)
+contains a setwd() line that must be updated to match your own local path before running the analysis.
+Alternatively, you can comment out the internal setwd() line and define the path manually in RStudio before sourcing the script.
+
+### Step 3 – Data Preparation
 
 Place your dataset in the `data/` folder.
-If no data are available, you can use the provided RATEAF-dummy.csv (structure-only, no clinical meaning).
+If no data are available, you can use the provided RATEAF-dummy.csv (structure-only, no clinical meaning) a two-row illustrative file that serves as a reference for column names and variable formatting. Please see the Data Policy section for further clarification.
 
 
-### Run Experiments
+### Step 4 – Run Experiments
 
 Each script in `/main` corresponds to one of the analyses presented in the NPJ manuscript.
 
