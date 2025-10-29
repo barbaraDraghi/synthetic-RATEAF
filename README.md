@@ -108,7 +108,18 @@ Together, these outputs reproduce the figures and numerical results discussed in
 
 This repository contains **only code and synthetic examples**.  
 No identifiable patient data are included or distributed.  
-All analyses involving real RATE-AF data must be conducted under approved governance and data-sharing agreements with CPRD / MHRA.
+All analyses involving real RATE-AF data must be conducted under approved governance and data-sharing agreements with **CPRD / MHRA**.  
+Researchers wishing to access the original RATE-AF clinical trial data should contact the Chief Investigator **Prof Dipak Kotecha (University of Birmingham)**.
+
+### Example Dataset – `RATEAF-dummy.csv`
+
+The file [`data/RATEAF-dummy.csv`](data/RATEAF-dummy.csv) is a **two-row illustrative dataset** provided as a **guideline** for expected structure and variable formatting.  
+It contains *no real clinical information* and is intended solely to demonstrate correct metadata and column definitions.
+
+Researchers interested in testing or extending the framework can:
+
+1. **Generate a dummy dataset** that follows the same metadata schema defined in this file, **or**  
+2. **Adapt the framework** to work with alternative datasets, following the same logic and preprocessing steps applied here, using the CSV structure as reference.
 
 ---
 
