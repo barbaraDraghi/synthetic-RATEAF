@@ -1,4 +1,4 @@
-# Synthetic RATE-AF – High-Fidelity Synthetic Data Experiments
+# High-fidelity synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study
 
 This repository contains the complete codebase to **reproduce the experiments** described in:
 
