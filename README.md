@@ -153,8 +153,8 @@ Researchers interested in testing or extending the framework can:
 ## Citation
 
 If you use this repository or build upon this codebase, please cite:
-> Draghi, B. et al. *High-fidelity synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study.*  
-> Submitted to *NPJ Digital Medicine – Digital Health Equity & Access*, 2025.
+> Draghi, B., Attal, D., Kotecha, D. et al. Synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study. Sci Rep 16, 36678 (2026). > [https://doi.org/10.1038/s41598-026-60252-z](https://doi.org/10.1038/s41598-026-60252-z)
+
 
 
 ---
