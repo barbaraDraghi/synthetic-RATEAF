@@ -2,9 +2,7 @@
 
 This repository contains the complete codebase to **reproduce the experiments** described in:
 
-> **Draghi, B. et al. (submitted)**  
-> *High-fidelity synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study*  
-> Submitted to *NPJ Digital Medicine – Digital Health Equity & Access* Collection.
+> Draghi, B., Attal, D., Kotecha, D. et al. Synthetic data to boost under-represented patients and create virtual trial cohorts: the RATE-AF case study. Sci Rep 16, 36678 (2026). > [https://doi.org/10.1038/s41598-026-60252-z](https://doi.org/10.1038/s41598-026-60252-z)
 
 The scripts here implement the **controlled**, **exploratory**, and **replication** boosting experiments, building on the original **RATE-AF randomized clinical trial**  
 > Kotecha, D. et al. *Effect of Digoxin vs Bisoprolol for Heart Rate Control in Atrial Fibrillation on Patient-Reported Quality of Life.*  
